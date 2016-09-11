@@ -1,0 +1,11 @@
+#docker-compose.yml for NGINX Web Server
+
+nginx:
+  image: 'nginx:1.10'
+  restart: always
+  ports:
+    - '8000:80'
+  volumes:
+    - './nginx/webpages/:/usr/share/nginx/html'
+    - './nginx/config:/etc/nginx'
+    - './nginx/logs:/var/log/nginx/log'
