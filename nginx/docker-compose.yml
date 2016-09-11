@@ -2,10 +2,11 @@
 
 nginx:
   image: 'nginx:1.10'
+  container_name: nginx
   restart: always
   ports:
     - '8000:80'
   volumes:
     - './nginx/webpages/:/usr/share/nginx/html'
-    - './nginx/config:/etc/nginx'
+    - './nginx/config/config.d:/etc/nginx/config.d'
     - './nginx/logs:/var/log/nginx/log'

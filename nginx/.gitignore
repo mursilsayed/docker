@@ -1,1 +1,4 @@
-nginx/
+nginx/logs/
+nginx/webpages/
+*.DS_Store
+
