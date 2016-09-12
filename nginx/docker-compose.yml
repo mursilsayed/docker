@@ -7,8 +7,9 @@ nginx:
   ports:
     - '8000:80'
     - '9000:9000'
+    - '9001:9001'
   volumes:
     - './nginx/webpages/:/usr/share/nginx/html'
-    - './nginx/config/config.d/:/etc/nginx/config.d/'
+    - './nginx/config/conf.d/:/etc/nginx/conf.d/'
     - './nginx/config/ssl:/etc/nginx/ssl'
     - './nginx/logs:/var/log/nginx'
