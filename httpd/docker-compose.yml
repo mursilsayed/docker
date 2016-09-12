@@ -1,0 +1,16 @@
+#docker-compose.yml for apache Web Server
+
+apache:
+  image: 'httpd:2.2'
+  container_name: apache
+  restart: always
+  ports:
+    - '8000:80'
+    #- '9000:9000'
+   # - '9001:9001'
+  volumes:
+    - './webpages/:/usr/local/apache2/htdocs/'
+    - './conf/httpd.conf/:/usr/local/apache2/conf/httpd.conf'
+    - './conf/extra/load-balancer.conf:/usr/local/apache2/conf/extra/load-balancer.conf'
+    #- './conf/ssl:/etc/nginx/ssl'
+    #- './logs:/var/log/nginx'
